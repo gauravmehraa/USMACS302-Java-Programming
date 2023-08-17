@@ -46,7 +46,6 @@ class Rectangle extends Shape{
     }
     
     Rectangle isSquare(){
-        Square s = (Square)this;
         if(side1 == side2) return s;
         return this;
         //return side1 == side2;
