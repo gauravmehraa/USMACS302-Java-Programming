@@ -1,4 +1,5 @@
 class Threads extends Thread {
+	static int waiting = 0;
 	Notify monitor =  new Notify();
 	Threads(String name){
 		super(name);
@@ -8,18 +9,18 @@ class Threads extends Thread {
 		int i = 1;
 		while(i <= 10){
 			synchronized(monitor){
-				System.out.println(this.getName()+" : "+i);
+				System.out.println(this.getName()+" : "+i+" "+waiting);
 				if(i == 6){
+					if(waiting == 3) monitor.notifyAll();
 					try{
+						waiting++;
 						monitor.wait();
 					}
 					catch(InterruptedException e){
 						System.out.println("Error");
 					}
-
 				}
 				i++;
-				monitor.notifyAll();
 			}
 
 		}

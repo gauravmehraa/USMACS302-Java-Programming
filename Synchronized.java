@@ -12,7 +12,6 @@ class Threads extends Thread {
 			}
 			System.out.println("Thread "+this.getName()+" stopped.");	
 		}
-		
 	}
 }
 
