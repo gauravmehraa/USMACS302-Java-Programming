@@ -1,9 +1,5 @@
 public class Armstrong {
     public static void main(String args[]){
-        if(args.length != 1){
-            System.out.println("Incorrect arguments");
-            System.exit(0);
-        }
         int n = Integer.parseInt(args[0]);
         int copy = n, temp = 0, digit;
 

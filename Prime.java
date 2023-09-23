@@ -1,11 +1,5 @@
-import java.lang.Math;
-
-class Prime{
+public class Prime{
     public static void main(String args[]){
-        if(args.length != 1){
-            System.out.println("Incorrect arguments");
-            System.exit(0);
-        }
         int n = Integer.parseInt(args[0]);
         boolean isPrime = true;
 

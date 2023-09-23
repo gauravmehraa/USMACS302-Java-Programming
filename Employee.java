@@ -1,7 +1,6 @@
 public class Employee {
-    private int ecode;
-    private double basicSalary, hra, da, netSalary, grossSalary, pf;
-
+    int ecode;
+    double basicSalary, hra, da, netSalary, grossSalary, pf;
     Employee(){
         ecode = 0;
         basicSalary = 0.0;
