@@ -43,15 +43,15 @@ public class AWTCalculator implements ActionListener{
 			double num1 = Double.valueOf(expression.substring(0, index));
 			double num2 = Double.valueOf(expression.substring(index + 1));
 			double result = 0;
-            switch(op){
-            	case 1: result = num1 + num2; break;
-            	case 2: result = num1 - num2; break;
-            	case 3: result = num1 * num2; break;
-            	case 4: result = num1 / num2; break;
-            	default: result = Double.NaN; break;
-            }
-            label.setText(Double.toString(result));
-        }
+			switch(op){
+			case 1: result = num1 + num2; break;
+			case 2: result = num1 - num2; break;
+			case 3: result = num1 * num2; break;
+			case 4: result = num1 / num2; break;
+			default: result = Double.NaN; break;
+			}
+			label.setText(Double.toString(result));
+		}
 	}
 
 	public void actionPerformed(ActionEvent e){
