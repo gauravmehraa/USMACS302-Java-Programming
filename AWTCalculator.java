@@ -35,8 +35,8 @@ public class AWTCalculator implements ActionListener{
 		String expression = label.getText();
 		int index = -1;
 		if(expression.contains("+")) index = expression.indexOf("+");
-        else if (expression.contains("-")) index = expression.indexOf("-");
-        else if (expression.contains("x")) index = expression.indexOf("x");
+		else if (expression.contains("-")) index = expression.indexOf("-");
+		else if (expression.contains("x")) index = expression.indexOf("x");
 		else if (expression.contains("/")) index = expression.indexOf("/");
 
 		if(index != -1){
