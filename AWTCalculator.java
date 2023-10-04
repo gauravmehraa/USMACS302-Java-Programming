@@ -5,10 +5,7 @@ import java.awt.event.*;
 public class AWTCalculator implements ActionListener{
 	Frame root;
 	Label label;
-	String buttonText[] = {	"7", "8", "9", "CLR",
-						   	"4", "5", "6", "X",
-							"1", "2", "3", "/",
-							"0", "+", "-", "="};
+	String buttonText[] = {	"7", "8", "9", "CLR", "4", "5", "6", "X", "1", "2", "3", "/", "0", "+", "-", "="};
 	Button buttons[] = new Button[16];
 	int op;
 
