@@ -11,14 +11,6 @@ public class UDPServer{
 
 				String sentmessage = new String(p.getData(), 0, p.getLength());
 				System.out.println("Received message: " + sentmessage);
-
-				InetAddress clientaddress = p.getAddress();
-				int clientport = p.getPort();
-				String message = "Message received";
-				byte[] data = message.getBytes();
-
-				DatagramPacket send = new DatagramPacket(data, data.length, clientaddress, clientport);
-				s.send(send);
 			}
 		}
 		catch(Exception e){

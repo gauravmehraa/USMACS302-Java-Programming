@@ -6,18 +6,11 @@ public class UDPClient{
 		try{
 			DatagramSocket s = new DatagramSocket();
 			InetAddress serveraddress = InetAddress.getByName("localhost");
-			String message = "Sample message";
+			String message = "Sample message from client";
 			byte[] send = message.getBytes();
 
 			DatagramPacket p = new DatagramPacket(send, send.length, serveraddress, serverport);
 			s.send(p);
-
-			byte[] buffer = new byte[1024];
-			DatagramPacket receive = new DatagramPacket(buffer, buffer.length);
-			s.receive(receive);
-
-			String receivedmessage = new String(receive.getData(), 0, receive.getLength());
-			System.out.println("Server Response: " + receivedmessage);
 		}
 		catch(Exception e){
 			e.printStackTrace();
