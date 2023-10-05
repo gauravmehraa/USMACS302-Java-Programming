@@ -9,8 +9,8 @@ public class UDPServer{
 				DatagramPacket p = new DatagramPacket(buffer, buffer.length);
 				s.receive(p);
 
-				String sentmessage = new String(p.getData(), 0, p.getLength());
-				System.out.println("Received message: " + sentmessage);
+				String message = new String(p.getData(), 0, p.getLength());
+				System.out.println("Received message: " +message);
 			}
 		}
 		catch(Exception e){

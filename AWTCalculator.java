@@ -32,16 +32,16 @@ public class AWTCalculator implements ActionListener{
 	}
 
 	public void calculate(){
-		String expression = label.getText();
+		String expr = label.getText();
 		int index = -1;
-		if(expression.contains("+")) index = expression.indexOf("+");
-		else if (expression.contains("-")) index = expression.indexOf("-");
-		else if (expression.contains("x")) index = expression.indexOf("x");
-		else if (expression.contains("/")) index = expression.indexOf("/");
+		if(expr.contains("+")) index = expr.indexOf("+");
+		else if (expr.contains("-")) index = expr.indexOf("-");
+		else if (expr.contains("x")) index = expr.indexOf("x");
+		else if (expr.contains("/")) index = expr.indexOf("/");
 
 		if(index != -1){
-			double num1 = Double.valueOf(expression.substring(0, index));
-			double num2 = Double.valueOf(expression.substring(index + 1));
+			double num1 = Double.valueOf(expr.substring(0, index));
+			double num2 = Double.valueOf(expr.substring(index + 1));
 			double result = 0;
 			switch(op){
 			case 1: result = num1 + num2; break;
@@ -73,6 +73,6 @@ public class AWTCalculator implements ActionListener{
 		}
 	}
 	public static void main(String args[]){
-		AWTCalculator calc = new AWTCalculator();
+		new AWTCalculator();
 	}
 }

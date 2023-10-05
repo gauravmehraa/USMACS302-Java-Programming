@@ -2,7 +2,7 @@ public class Threads extends Thread {
 	private int n = 1;
 
 	Threads(String name){
-
+		super(name);
 	}
 
 	public void run(String number){
